@@ -1,0 +1,180 @@
+/* Reset de estilos para todo el documento */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #121212;
+	color: #ffffff;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* Estilos para el encabezado */
+
+header {
+	background-color: #1b1f3a;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+	padding: 20px;
+	position: relative;
+}
+
+header::before {
+	background-color: rgba(255, 255, 255, 0.1);
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+h1 {
+	color: #ffffff;
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/* Estilos para el contenedor principal */
+
+#container {
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	margin: 50px auto;
+	max-width: 800px;
+	padding: 30px;
+	position: relative;
+}
+
+#container::before {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	bottom: -10px;
+	content: "";
+	left: -10px;
+	position: absolute;
+	right: -10px;
+	top: -10px;
+	z-index: -1;
+}
+
+#word {
+	color: #ffffff;
+	font-size: 48px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#definition {
+	color: #ffffff;
+	font-size: 20px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#wikipedia-link {
+	color: #ffffff;
+	display: block;
+	font-size: 18px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+#generate-button {
+	background-color: #007AFF;
+	border-radius: 10px;
+	border: none;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	color: #ffffff;
+	font-size: 24px;
+	margin: 0 auto 30px;
+	padding: 10px 20px;
+	text-align: center;
+	text-shadow: 0 1px 0 #00478F;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+	display: block;
+}
+
+#generate-button:hover {
+	background-color: #00478F;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+	cursor: pointer;
+}
+
+/* Estilos para los créditos */
+.credits {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .credits a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .credits a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+  
+    .container {
+      max-width: 90%;
+      margin: 20px auto;
+    }
+  
+    h1 {
+      font-size: 32px;
+      text-align: center;
+    }
+  
+    .description {
+      font-size: 20px;
+    }
+  
+    #generate-button {
+      font-size: 16px;
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+  
+    .credits {
+      height: 40px;
+      font-size: 12px;
+    }
+  }
